@@ -6,14 +6,14 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class FactureService {
-  private readonly server: string =environment.API_Base ;
+  readonly API_URL = environment.API_Base;
 
   constructor(private httpClient: HttpClient) { }
 
   getAllFactures() {
-    return this.httpClient.get(`${this.server}/facture/retrieve-all-factures`)
+    return this.httpClient.get(`${this.API_URL}/facture/retrieve-all-factures`)
   }
   addFacture(facture : any) {
-    return this.httpClient.post(`${this.server}/facture/add-facture`, facture)
+    return this.httpClient.post(`${this.API_URL}/facture/add-facture`, facture)
   }
 }
