@@ -11,9 +11,9 @@ export class FactureService {
   constructor(private httpClient: HttpClient) { }
 
   getAllFactures() {
-    return this.httpClient.get(`${this.server}/retrieve-all-factures`)
+    return this.httpClient.get(`${this.server}/facture/retrieve-all-factures`)
   }
   addFacture(facture : any) {
-    return this.httpClient.post(`${this.server}/add-facture`, facture)
+    return this.httpClient.post(`${this.server}/facture/add-facture`, facture)
   }
 }
