@@ -3,7 +3,7 @@ FROM node:14.20.0 AS builder
 WORKDIR /app
 COPY . .
 COPY package.json package-lock.json ./
-RUN npm install
+RUN npm install 
 RUN npm run build --prod
 # stage 2 
 FROM nginx:alpine  
