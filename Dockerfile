@@ -4,7 +4,7 @@ WORKDIR /app
 COPY . . 
 COPY package.json package-lock.json ./
 RUN npm install 
-RUN npm run build --prod 
+RUN npm run build --prod  
 # stage 2  
 FROM nginx:alpine  
 COPY nginx.conf  /etc/nginx/conf.d/default.conf
